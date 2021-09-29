@@ -1,4 +1,4 @@
-def vus()
+def vus():
     ear=int(input())
     if ear%100==0:
         print("Нет")

@@ -1,4 +1,4 @@
-def dd()
+def dd():
     x=int(input())
     y=int(input())
     z=int(input())

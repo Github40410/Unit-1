@@ -1,4 +1,4 @@
-def asss()
+def asss():
     x1=int(input())
     x2=int(input())
     y1=int(input())
