@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 age=int(input())
 name=str(input())
 if (age>0) and (age<75):

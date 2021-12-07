@@ -1,4 +1,4 @@
-"# -- coding: utf-8 --"
+# -- coding: utf-8 --
 def rv():
   d=0
   while int(input("Введите число: ")) != 0:

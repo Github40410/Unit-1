@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 def cc():
     a=int(input())
     b=int(input())

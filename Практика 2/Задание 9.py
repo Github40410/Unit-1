@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 def ff():
     n=int(input())
     m=int(input())

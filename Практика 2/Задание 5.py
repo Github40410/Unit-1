@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 def scv():
     x=int(input())
     y=int(input())

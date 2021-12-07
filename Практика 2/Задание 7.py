@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 def vus():
     ear=int(input())
     if ear%100==0:

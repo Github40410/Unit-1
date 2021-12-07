@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 n=int(input())
 hours=n//60
 minute=n%60

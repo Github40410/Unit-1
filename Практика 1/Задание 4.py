@@ -1,3 +1,4 @@
+# -- coding: utf-8 --
 seconds=int(input())
 day=seconds//86400
 ost=seconds%86400

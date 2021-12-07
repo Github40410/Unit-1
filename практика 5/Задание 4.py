@@ -1,4 +1,4 @@
-"# -- coding: utf-8 --"
+# -- coding: utf-8 --
 def sr():
   x=float(input("Введите первый результат: "))
   y=float(input("Введите нужный результат: "))

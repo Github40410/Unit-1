@@ -1,4 +1,4 @@
-"# -- coding: utf-8 --"
+# -- coding: utf-8 --
 def dd():
   s=1
   a=2

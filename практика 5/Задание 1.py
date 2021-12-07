@@ -1,4 +1,4 @@
-"# -- coding: utf-8 --"
+# -- coding: utf-8 --
 def dd():
   a=1
   N = int(input("Введите число:"))
