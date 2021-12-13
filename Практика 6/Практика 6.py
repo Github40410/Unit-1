@@ -5,7 +5,7 @@ from tkinter import scrolledtext
 def z1():
     w1= Tk()
     w1.title("Задание 1")
-    w1.geometry("500x300")
+    w1.geometry("1000x500")
     def z11():
         a=1
         n=int(N1.get())
@@ -26,7 +26,7 @@ def z1():
 def z2():
     w2=Tk()
     w2.title("Задание 2")
-    w2.geometry("500x300")
+    w2.geometry("1000x500")
     def z22():
         s=1
         a=2
@@ -51,7 +51,7 @@ def z2():
 def z3():
     w3=Tk()
     w3.title("Задание 3")
-    w3.geometry("500x300")
+    w3.geometry("1000x500")
     def z33():
         st=1
         p=0
@@ -76,18 +76,26 @@ def z3():
     g3.grid(column=0, row=1)
     w3.mainloop()
 def z4():
+    global g4
     w4=Tk()
     w4.title("Задание 4")
-    w4.geometry("500x300")
+    w4.geometry("1000x500")
     def z44():
+        
+        global g4
+        g4.delete(1.0, "end")
         d=1
         x=int(N4.get())
         y=int(N41.get())
+        
         while x<y:
             x=x+(x/10)
             d+=1
         else:
             g4.insert(INSERT, d)
+        
+        
+        
     s4=Label(w4, text="Введите 1 и 2 значения: ")
     s4.grid(column=0, row=0)
     N4=Entry(w4, width=10)
@@ -96,14 +104,14 @@ def z4():
     N41.grid(column=3, row=0)
     btn4=Button(w4, text="Посчитать", command=z44)
     btn4.grid(column=4, row=0)
-    g4 = scrolledtext.ScrolledText(w4, width=50, height=15)
+    g4 = Text(w4, width=50, height=15)
     g4.grid(column=0, row=1)
     w4.mainloop()
 def z5():
     global a
     w5=Tk()
     w5.title("Задание 5")
-    w5.geometry("500x300")
+    w5.geometry("1000x500")
     a=0
     def z55(): 
         global a 
@@ -130,7 +138,7 @@ def z6():
     global a
     w6=Tk()
     w6.title("Задание 6")
-    w6.geometry("500x300")
+    w6.geometry("1000x500")
     n=0
     d=0
     def z66(): 
@@ -161,67 +169,63 @@ def z7():
     global a
     w7=Tk()
     w7.title("Задание 7")
-    w7.geometry("500x300")
+    w7.geometry("1000x500")
     n=0
-    d=0
+    d=999999999999999
     def z77(): 
         global n
         global d
-        global a
+        g7.delete(1.0 , "end")
         a=int(N7.get())
-        while a!=0:
-            if int(n)<int(a):
-                if n==0:
-                    n=a
-                    N7.delete(0, "end")
-                    break  
-                else:
-                    d+=1
-                    n=a
-                    N7.delete(0, "end")
-                    break    
-            else:
-                a=str(d)
-                g7.insert(INSERT, a)
+        if (int(a)>d):
+            n+=1
+        d=int(a)
+        if (int(a)==0):
+            g7.insert(INSERT, n)
+            d=9999999999999999
+            n=0
+        N7.delete(0, "end")
+        
     s7=Label(w7, text="Введите число: ")
     s7.grid(column=0, row=0)
     N7=Entry(w7, width=10)
     N7.grid(column=1, row=0)
     btn7=Button(w7, text="Посчитать", command=z77)
     btn7.grid(column=4, row=0)
-    g7 = scrolledtext.ScrolledText(w7, width=50, height=15)
+    g7 = Text(w7, width=50, height=15)
     g7.grid(column=0, row=1)
     w7.mainloop()
 def z8():
     global n
     global d
-    global a
     global x
     w8=Tk()
     w8.title("Задание 8")
-    w8.geometry("500x300")
+    w8.geometry("1000x500")
     n=0
     d=0
     x=0
     def z88(): 
         global n
         global d
-        global a
         global x
+        g8.delete(1.0 , "end")
         a=int(N8.get())
-        while a!=0:
-            if int(n)==int(a):
+        while a != 0:
+            if n == a:
                 d+=1
             else:
                 n=a
                 x=max(x,d)
                 d=1
-            N8.delete(0, "end")
-            break  
+            break
         else:
             x=max(x,d)
-            x=str(x)
             g8.insert(INSERT, x)
+            x=0
+            d=0
+            n=0
+        N8.delete(0, "end")
     s8=Label(w8, text="Введите число: ")
     s8.grid(column=0, row=0)
     N8=Entry(w8, width=10)
@@ -233,7 +237,7 @@ def z8():
     w8.mainloop()
 wind = Tk()
 wind.title("Добро пожаловать")
-wind.geometry("500x300")
+wind.geometry("1000x500")
 lbl=Label(wind, text="Выберите задание: ")
 lbl.grid(column=0, row=0)
 btn=Button(wind, text="Задание 1", bg="red", command=z1)
