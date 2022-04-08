@@ -3,25 +3,13 @@ public class Zad2 {
         int[] b = {100, -7, 4, 10, -3, -6};
         double p[] = new double[b.length];
         int i=0;
+        int m = 0;
         for (int a: b) {
             if (a>0) {
                 p[i] = Math.sqrt(a)/5;
                 i++;
             }
-        }
-        i=0;
-        int m=0;
-        for (double a: p) {
-            double min = p[i];
-            for (int g=0; g<p.length; g++) {
-                if (min<p[g]) {
-                    p[i] = p[g];
-                    p[g] = min;
-                    break;
-                }
-            }
-            i++;
-            if (a!=0.0) {
+            if (a>0) {
                 m++;
             }
         }
@@ -32,6 +20,18 @@ public class Zad2 {
                 c[i]=a;
                 i++;
             }
+        }
+        i=0;
+        for (double a: c) {
+            double min = c[i];
+            for (int g=0; g<c.length; g++) {
+                if (min<c[g]) {
+                    c[i] = c[g];
+                    c[g] = min;
+                    break;
+                }
+            }
+            i++;
         }
         for (double a: c) {
             System.out.println(a);
